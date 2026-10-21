@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Fox — главная</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- кружок, который бегает за мышкой -->
+  <div id="follower"></div>
+
+  <header>
+    <div class="logo">🦊 Pixel Fox</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="about.html">Об игре</a>
+      <a href="join.html">Присоединяйся</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <!-- слои для параллакса, data-speed - насколько сильно двигается слой -->
+    <div class="layer" data-speed="20" style="left:10%; top:15%;">☁️</div>
+    <div class="layer" data-speed="40" style="left:80%; top:20%;">⭐</div>
+    <div class="layer" data-speed="60" style="left:20%; top:65%;">🌲</div>
+    <div class="layer" data-speed="80" style="left:75%; top:60%;">🍄</div>
+
+    <div class="hero-text">
+      <h1>Pixel Fox</h1>
+      <p>Быстрый пиксельный платформер про лисёнка, который ищет дорогу домой</p>
+      <br>
+      <button id="nameBtn">Представиться</button>
+      <button id="parallaxBtn">Выключить параллакс</button>
+      <p id="hello"></p>
+      <p id="modeText"></p>
+    </div>
+  </section>
+
+  <div class="container">
+    <h2>Попробуй сам!</h2>
+    <p>Управляй лисой стрелками или WASD и собирай монетки. Счёт: <b id="score">0</b></p>
+    <br>
+    <div class="arena" id="arena">
+      <div id="coin" class="coin">🪙</div>
+      <div id="fox">🦊</div>
+    </div>
+  </div>
+
+  <footer>
+    <p id="info"></p>
+    <button id="backBtn">← Назад</button>
+    <p>© 2026 Pixel Fox (учебный проект)</p>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

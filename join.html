@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Fox — присоединяйся</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🦊 Pixel Fox</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="about.html">Об игре</a>
+      <a href="join.html">Присоединяйся</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Присоединяйся</h1>
+
+    <h2>⏳ До релиза осталось</h2>
+    <div class="timer" id="timer"></div>
+
+    <h2 style="margin-top:30px;">🎨 Песочница</h2>
+    <p>Зажми левую кнопку мыши и води по полю. Клавиши: R, G, B, Y — цвет, C — очистить.
+       Цвет: <b id="colorName">оранжевый</b>. Нажато клавиш: <b id="pressCount">0</b></p>
+    <br>
+    <div class="sandbox" id="sandbox"></div>
+
+    <h2 style="margin-top:30px;">🖼 Галерея</h2>
+    <p>Кликни по картинке. Закрыть — крестик, клик по фону или Esc.</p>
+    <br>
+    <div class="gallery" id="gallery">
+      <img src="https://picsum.photos/seed/fox1/320/200" data-big="https://picsum.photos/seed/fox1/1000/600" alt="Скриншот 1">
+      <img src="https://picsum.photos/seed/fox2/320/200" data-big="https://picsum.photos/seed/fox2/1000/600" alt="Скриншот 2">
+      <img src="https://picsum.photos/seed/fox3/320/200" data-big="https://picsum.photos/seed/fox3/1000/600" alt="Скриншот 3">
+      <img src="https://picsum.photos/seed/fox4/320/200" data-big="https://picsum.photos/seed/fox4/1000/600" alt="Скриншот 4">
+    </div>
+
+    <h2 style="margin-top:30px;" id="formTitle">📝 Заявка на ранний доступ</h2>
+    <form id="joinForm" novalidate>
+      <label for="name">Имя</label>
+      <input type="text" id="name" placeholder="Как тебя зовут?">
+      <div class="err-text" id="nameErr"></div>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="you@mail.com">
+      <div class="err-text" id="emailErr"></div>
+
+      <label for="pass">Пароль</label>
+      <input type="password" id="pass" placeholder="Минимум 6 символов и цифра">
+      <div class="err-text" id="passErr"></div>
+
+      <label for="platform">Платформа</label>
+      <select id="platform">
+        <option value="">-- выбери --</option>
+        <option value="win">Windows</option>
+        <option value="linux">Linux</option>
+        <option value="mac">macOS</option>
+      </select>
+      <div class="err-text" id="platformErr"></div>
+      <p id="platformInfo"></p>
+
+      <label><input type="checkbox" id="agree" style="width:auto;"> Согласен на рассылку</label>
+      <div class="err-text" id="agreeErr"></div>
+
+      <button type="submit">Отправить</button>
+    </form>
+    <p id="success"></p>
+
+    <br>
+    <button id="popupBtn">Открыть popup</button>
+    <button id="winBtn">Открыть в маленьком окне</button>
+  </div>
+
+  <!-- попап -->
+  <div class="overlay" id="popup">
+    <div class="popup">
+      <span class="close" id="popupClose">&times;</span>
+      <h3>🎁 Ранний доступ</h3>
+      <p>Оставь заявку и получишь скидку на игру в день релиза!</p>
+      <br>
+      <button id="popupGo">Оставить заявку</button>
+    </div>
+  </div>
+
+  <!-- лайтбокс -->
+  <div class="overlay" id="lightbox">
+    <span class="close" id="lbClose">&times;</span>
+    <img id="bigImg" src="" alt="Большая картинка">
+  </div>
+
+  <footer>
+    <p id="info"></p>
+    <button id="backBtn">← Назад</button>
+    <p>© 2026 Pixel Fox (учебный проект)</p>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/join.js"></script>
+</body>
+</html>

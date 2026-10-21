@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Fox — об игре</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🦊 Pixel Fox</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="about.html">Об игре</a>
+      <a href="join.html">Присоединяйся</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Об игре</h1>
+
+    <h2>Особенности</h2>
+    <p>Наведи мышку на карточку или нажми клавишу 1-4.</p>
+    <br>
+    <!-- карточки создаются через JS -->
+    <div class="cards" id="cards"></div>
+
+    <h2 style="margin-top:40px;">Скриншоты (карусель)</h2>
+    <p>Кнопки или стрелки ← → на клавиатуре.</p>
+    <br>
+    <div class="carousel">
+      <div class="slides" id="slides">
+        <div class="slide" style="background:#e17055;">🌲 Уровень 1: Лес</div>
+        <div class="slide" style="background:#0984e3;">🌊 Уровень 2: Река</div>
+        <div class="slide" style="background:#6c5ce7;">🌙 Уровень 3: Ночь</div>
+        <div class="slide" style="background:#00b894;">🏠 Уровень 4: Дом</div>
+      </div>
+      <button class="arrow left" id="prevBtn">&#10094;</button>
+      <button class="arrow right" id="nextBtn">&#10095;</button>
+    </div>
+    <p style="text-align:center;" id="slideNum">1 / 4</p>
+
+    <h2 style="margin-top:40px;">Вопросы и ответы (аккордеон)</h2>
+    <div id="accordion">
+      <div class="acc-title">На чём можно играть?</div>
+      <div class="acc-text">Пока только ПК (Windows и Linux). Потом, возможно, выйдет на Switch.</div>
+      <div class="acc-title">Сколько будет стоить?</div>
+      <div class="acc-text">Примерно 300 рублей. Для подписчиков рассылки будет скидка.</div>
+      <div class="acc-title">Сколько уровней?</div>
+      <div class="acc-text">В релизе будет 20 уровней и 4 босса.</div>
+    </div>
+
+    <h2 style="margin-top:40px;">Демо: всплытие и перехват событий</h2>
+    <p>Кликни по зелёному квадрату и посмотри на лог.</p>
+    <br>
+    <div class="box1" id="box1">box1 (красный)
+      <div class="box2" id="box2">box2 (синий)
+        <div class="box3" id="box3">box3 (зелёный)</div>
+      </div>
+    </div>
+    <label><input type="checkbox" id="stopCheck"> stopPropagation на зелёном</label>
+    <button id="clearLog">Очистить лог</button>
+    <div id="log"></div>
+  </div>
+
+  <footer>
+    <p id="info"></p>
+    <button id="backBtn">← Назад</button>
+    <p>© 2026 Pixel Fox (учебный проект)</p>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>
